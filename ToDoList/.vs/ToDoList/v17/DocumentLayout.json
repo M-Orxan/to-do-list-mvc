@@ -1,44 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\utilities\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\utilities\\dbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\utilities\\idbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\utilities\\idbinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\data\\applicationdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\utilities\\websiterole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\utilities\\websiterole.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\migrations\\20241028140649_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\migrations\\20241028140649_init.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\models\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\models\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\models\\todo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -46,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -67,118 +30,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "DbInitializer.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Utilities\\DbInitializer.cs",
-              "RelativeDocumentMoniker": "ToDoList\\Utilities\\DbInitializer.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Utilities\\DbInitializer.cs",
-              "RelativeToolTip": "ToDoList\\Utilities\\DbInitializer.cs",
-              "ViewState": "AgIAABIAAAAAAAAAAAAAABkAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T14:38:22.148Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "IDbInitializer.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Utilities\\IDbInitializer.cs",
-              "RelativeDocumentMoniker": "ToDoList\\Utilities\\IDbInitializer.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Utilities\\IDbInitializer.cs",
-              "RelativeToolTip": "ToDoList\\Utilities\\IDbInitializer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAATAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T14:38:13.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "WebsiteRole.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Utilities\\WebsiteRole.cs",
-              "RelativeDocumentMoniker": "ToDoList\\Utilities\\WebsiteRole.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Utilities\\WebsiteRole.cs",
-              "RelativeToolTip": "ToDoList\\Utilities\\WebsiteRole.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T14:34:57.28Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "20241028140649_Init.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Migrations\\20241028140649_Init.cs",
-              "RelativeDocumentMoniker": "ToDoList\\Migrations\\20241028140649_Init.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Migrations\\20241028140649_Init.cs",
-              "RelativeToolTip": "ToDoList\\Migrations\\20241028140649_Init.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T14:06:49.795Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Program.cs",
-              "RelativeDocumentMoniker": "ToDoList\\Program.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Program.cs",
-              "RelativeToolTip": "ToDoList\\Program.cs",
-              "ViewState": "AgIAABgAAAAAAAAAAAAAAC0AAAAOAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T13:50:38.131Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\appsettings.json",
-              "RelativeDocumentMoniker": "ToDoList\\appsettings.json",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\appsettings.json",
-              "RelativeToolTip": "ToDoList\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-10-28T13:50:19.154Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ToDo.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Models\\ToDo.cs",
-              "RelativeDocumentMoniker": "ToDoList\\Models\\ToDo.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Models\\ToDo.cs",
-              "RelativeToolTip": "ToDoList\\Models\\ToDo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAnAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T13:41:35.069Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Models\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "ToDoList\\Models\\ApplicationUser.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Models\\ApplicationUser.cs",
-              "RelativeToolTip": "ToDoList\\Models\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T13:38:19.925Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplicationDbContext.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Data\\ApplicationDbContext.cs",
-              "RelativeDocumentMoniker": "ToDoList\\Data\\ApplicationDbContext.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Data\\ApplicationDbContext.cs",
-              "RelativeToolTip": "ToDoList\\Data\\ApplicationDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA3AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-10-28T13:37:39.419Z"
             }
           ]
         }

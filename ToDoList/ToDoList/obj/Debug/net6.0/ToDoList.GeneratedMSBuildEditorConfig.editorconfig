@@ -18,12 +18,20 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\USER\Desktop\Projects\to-do-list-mvc\ToDoList\ToDoList
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/USER/Desktop/Projects/to-do-list-mvc/ToDoList/ToDoList/Views/Home/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+[C:/Users/USER/Desktop/Projects/to-do-list-mvc/ToDoList/ToDoList/Views/Pages/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQWJvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/USER/Desktop/Projects/to-do-list-mvc/ToDoList/ToDoList/Views/Home/Privacy.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+[C:/Users/USER/Desktop/Projects/to-do-list-mvc/ToDoList/ToDoList/Views/Pages/Contact.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQ29udGFjdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Projects/to-do-list-mvc/ToDoList/ToDoList/Views/Pages/Home.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcSG9tZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Projects/to-do-list-mvc/ToDoList/ToDoList/Views/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/USER/Desktop/Projects/to-do-list-mvc/ToDoList/ToDoList/Views/Shared/Error.cshtml]

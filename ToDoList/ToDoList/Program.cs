@@ -38,7 +38,7 @@ app.UseAuthorization();
 
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Pages}/{action=Home}/{id?}");
 
 app.Run();
 async Task DataSeedingAsync()

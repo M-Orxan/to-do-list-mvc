@@ -1,0 +1,78 @@
+﻿
+@{
+    ViewData["Title"] = "Contact";
+}
+
+@* <div class="contact-page" style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    <h2>Contact Us</h2>
+    <p>We’d love to hear from you! Whether you have questions, feedback, or suggestions, feel free to reach out.</p>
+
+    <div class="row">
+        <div class="col-9">
+            <!-- Contact Form -->
+            <form asp-controller="Pages" asp-action="SubmitContact" method="post" style="margin-top: 20px;">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px;" />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px;" />
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px;" />
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px;"></textarea>
+
+                <button type="submit" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px;">Send Message</button>
+            </form>
+        </div>
+
+        <div class="col-3">
+            <!-- Direct Contact Information -->
+            <h3>Contact Information</h3>
+            <p>Email: <a href="mailto:support@website.com">orxanm385@gmail.com</a></p>
+
+        </div>
+    </div>
+   
+   
+  
+
+   
+
+</div> *@
+
+<div class="contact-page" style="max-width: 800px; margin: 0 auto; padding: 20px;">
+    <h2 style="text-align: center;">Contact Us</h2>
+    <p style="text-align: center;">We’d love to hear from you! Whether you have questions, feedback, or suggestions, feel free to reach out. Our team is here to help you make the most of [Website Name].</p>
+
+    <div style="display: flex; gap: 40px; margin-top: 20px;">
+        <!-- Contact Form -->
+        <div style="flex: 9;">
+            <form asp-controller="Pages" asp-action="SubmitContact" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px;" />
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px;" />
+
+                <label for="subject">Subject</label>
+                <input type="text" id="subject" name="subject" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px;" />
+
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" required style="width: 100%; padding: 8px; margin-top: 5px; margin-bottom: 10px;"></textarea>
+
+                <button type="submit" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px;">Send Message</button>
+            </form>
+        </div>
+
+        <!-- Contact Information -->
+        <div style="flex: 6;">
+            <h3>Contact Information</h3>
+            <p>Email: <a href="mailto:support@website.com">support@website.com</a></p>
+           
+          
+        </div>
+    </div>
+</div>
+
