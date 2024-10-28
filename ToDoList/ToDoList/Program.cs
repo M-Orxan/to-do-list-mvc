@@ -1,5 +1,9 @@
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
 using ToDoList.Data;
+using ToDoList.Models;
+using ToDoList.Utilities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -7,7 +11,15 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
+
+
+builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
+    .AddEntityFrameworkStores<ApplicationDbContext>()
+    .AddDefaultTokenProviders();
+
+builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 var app = builder.Build();
+DataSeedingAsync();
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
@@ -29,3 +41,11 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+async Task DataSeedingAsync()
+{
+    using (var scope = app.Services.CreateScope())
+    {
+        var dbInitialize = scope.ServiceProvider.GetRequiredService<IDbInitializer>();
+        await dbInitialize.InitializeAsync();
+    }
+}
