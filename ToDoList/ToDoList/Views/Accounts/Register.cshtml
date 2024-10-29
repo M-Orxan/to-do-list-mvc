@@ -1,0 +1,50 @@
+﻿@model RegisterVM
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="homepage-content" style="text-align: center; padding: 50px;">
+    <h1>Register</h1>
+  
+
+    <div style="max-width: 600px; margin: 0 auto;">
+        <div asp-validation-summary="ModelOnly" class="text-danger fw-bold"></div>
+        <form asp-controller="Accounts" asp-action="Register" method="post">
+            <div class="input-group">
+                <input asp-for="FirstName" placeholder="Name" type="text" style="width: 100%; padding: 8px; margin-top: 5px" />
+                <span class="text-danger" asp-validation-for="FirstName"></span>
+            </div>
+            <div class="input-group">
+                <input asp-for="LastName" placeholder="Surname" type="text" style="width: 100%; padding: 8px; margin-top: 5px;" />
+                <span class="text-danger" asp-validation-for="LastName"></span>
+
+            </div>
+            <div class="input-group">
+                <input asp-for="Username" placeholder="Username" type="text" style="width: 100%; padding: 8px; margin-top: 5px" />
+                <span class="text-danger" asp-validation-for="Username"></span>
+
+            </div>
+            <div class="input-group">
+                <input asp-for="Email" placeholder="Email" type="email" style="width: 100%; padding: 8px; margin-top: 5px" />
+                <span class="text-danger" asp-validation-for="Email"></span>
+
+            </div>
+            <div class="input-group">
+                <input asp-for="Password" type="password" placeholder="passsword" style="width: 100%; padding: 8px; margin-top: 5px; " />
+                <span class="text-danger" asp-validation-for="Password"></span>
+
+            </div>
+            <div class="input-group">
+                <input asp-for="CheckPassword" type="password" placeholder="passsword again" style="width: 100%; padding: 8px; margin-top: 5px;" />
+                <span class="text-danger" asp-validation-for="CheckPassword"></span>
+
+            </div>
+
+            <button type="submit" style="padding: 10px 20px; margin-top: 5px; background-color: #007bff; color: white; border: none; border-radius: 5px;">Register</button>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptsPartial.cshtml" />
+}

@@ -1,0 +1,35 @@
+﻿@model LoginVM
+@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div class="homepage-content" style="text-align: center; padding: 50px;">
+    <h1>Login</h1>
+   
+
+    <div style="max-width: 600px; margin: 0 auto;">
+        <div asp-validation-summary="ModelOnly" class="text-danger fw-bold"></div>
+        <form asp-controller="Accounts" asp-action="Login" method="post">
+            <div class="input-group">
+                <input asp-for="Email" placeholder="email" type="email" style="width: 100%; padding: 8px; margin-top: 5px;" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+
+            </div>
+          
+            <div class="input-group">
+                <input asp-for="Password" type="password" placeholder="passsword"  style="width: 100%; padding: 8px; margin-top: 5px;" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+
+            </div>
+          
+            <button type="submit" style="padding: 10px 20px; margin-top: 5px; background-color: #007bff; color: white; border: none; border-radius: 5px;">Login</button>
+
+        </form>
+        <p style="margin-top: 15px;">
+            Don't have an account?
+            <a asp-controller="Accounts" asp-action="Register" style="color: #007bff; text-decoration: none;">Register here</a>
+        </p>
+          </div>
+</div>
+

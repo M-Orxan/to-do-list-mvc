@@ -28,7 +28,6 @@
     <div id="wrapper">
 
         <!-- Sidebar -->
-       
         <!-- End of Sidebar -->
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
@@ -39,12 +38,9 @@
                 <!-- Topbar -->
                 <nav class="navbar navbar-expand navbar-light bg-white topbar mb-4 static-top shadow">
 
-                    
                     <!-- Topbar Navbar -->
-                  
-                       
-                  
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav mr-auto">
                             <li class="nav-item">
                                 <a class="nav-link" style="color: black;" asp-controller="Pages" asp-action="Home">Home</a>
@@ -52,30 +48,49 @@
                             <li class="nav-item">
                                 <a class="nav-link" style="color: black;" asp-controller="Pages" asp-action="About">About us</a>
                             </li>
+                            @if (User.Identity.IsAuthenticated)
+                            {
                                 <li class="nav-item">
-                                <a class="nav-link" asp-controller="Pages" asp-action="Contact" style="color: black;">Contact</a>
+                                    <a class="nav-link" asp-controller="ToDos" asp-action="Index" style="color: black;">My To Do List</a>
                                 </li>
-                           
-                            </ul>
+                            }
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Pages" asp-action="Contact" style="color: black;">Contact</a>
+                            </li>
+
+                        </ul>
 
                         <ul class="navbar-nav ml-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" style="color: black;" href="#">Login</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" style="color: black;" href="#">Register</a>
-                            </li>
+                            @if (!User.Identity.IsAuthenticated)
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: black;" asp-controller="Accounts" asp-action="Login">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: black;" asp-controller="Accounts" asp-action="Register">Register</a>
+                                </li>
+                            }
+                            else
+                            {
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: black;">@User.Identity.Name</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" style="color: black;" asp-controller="Accounts" asp-action="LogOut">Log out</a>
+                                </li>
+                            }
+
                         </ul>
-                        
-                            
-                        </div>
-                    
+
+
+                    </div>
+
 
                 </nav>
                 <!-- End of Topbar -->
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
-            @RenderBody()
+                    @RenderBody()
                 </div>
                 <!-- /.container-fluid -->
 
@@ -97,10 +112,6 @@
     </div>
     <!-- End of Page Wrapper -->
     <!-- Scroll to Top Button-->
-    
-
-   
-
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
