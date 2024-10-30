@@ -22,6 +22,8 @@ namespace ToDoList.Controllers
             _userManager = userManager;
             _roleManager = roleManager;
         }
+
+        [HttpGet("/login")]
         public IActionResult Login()
         {
             return View();

@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ToDoList.Data;
@@ -7,6 +8,8 @@ using ToDoList.ViewModels;
 
 namespace ToDoList.Controllers
 {
+    [Authorize(Roles ="Admin")]
+    [Authorize(Roles ="User")]
     public class ToDosController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -19,9 +22,11 @@ namespace ToDoList.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            var toDos = await _context.ToDos.ToListAsync();
+            var loggedInUser = await _userManager.GetUserAsync(User);
+            var toDos = await _context.ToDos.Include(x => x.ApplicationUser).Where(x => x.ApplicationUserId == loggedInUser.Id).ToListAsync();
             var toDoVMs = toDos.Select(x => new ToDoVM
             {
+                Id = x.Id,
                 Title = x.Title,
                 Deadline = x.Deadline,
                 Description = x.Description,
@@ -49,8 +54,8 @@ namespace ToDoList.Controllers
                 return View(vm);
             }
 
-
-            var checkByTitle=await _context.ToDos.AnyAsync(x=> x.Title == vm.Title);
+            var loggedInUser = await _userManager.GetUserAsync(User);
+            var checkByTitle = await _context.ToDos.Where(x => x.ApplicationUserId == loggedInUser.Id).AnyAsync(x => x.Title == vm.Title);
             if (checkByTitle)
             {
                 ModelState.AddModelError("Title", "To do with the same title already exists");
@@ -62,22 +67,122 @@ namespace ToDoList.Controllers
                 ModelState.AddModelError("Deadline", "The deadline cannot be in the past");
                 return View(vm);
             }
-            var loggedInUser = await _userManager.GetUserAsync(User);
+
 
             var toDo = new ToDo()
             {
+                Id = vm.Id,
                 Title = vm.Title,
                 Deadline = vm.Deadline,
                 Description = vm.Description,
                 ApplicationUserId = loggedInUser.Id,
                 CreatedDate = DateTime.Now,
-                IsCompleted = false,
+
             };
 
             await _context.ToDos.AddAsync(toDo);
             await _context.SaveChangesAsync();
 
             return RedirectToAction("Index", "ToDos");
+        }
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> Delete(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var toDo = await _context.ToDos.FirstOrDefaultAsync(x => x.Id == id);
+            if (toDo == null)
+            {
+                return NotFound();
+            }
+
+            _context.ToDos.Remove(toDo);
+            await _context.SaveChangesAsync();
+
+            return RedirectToAction("Index", "ToDos");
+        }
+
+        public async Task<IActionResult> Update(int? id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+
+            var toDo = await _context.ToDos.FirstOrDefaultAsync(x => x.Id == id);
+            if (toDo == null)
+            {
+                return NotFound();
+            }
+
+            var toDoVM = new UpdateToDoVM()
+            {
+                Id = toDo.Id,
+                Title = toDo.Title,
+                Deadline = toDo.Deadline,
+                Description = toDo.Description,
+                IsCompleted = toDo.IsCompleted,
+
+            };
+
+            return View(toDoVM);
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> Update(UpdateToDoVM vm)
+        {
+
+            var toDo = await _context.ToDos.FirstOrDefaultAsync(x => x.Id == vm.Id);
+            if (toDo == null)
+            {
+                return NotFound();
+            }
+
+            if (vm.Deadline < DateTime.Now.AddDays(-1))
+            {
+                ModelState.AddModelError("Deadline", "The deadline cannot be in the past");
+                return View(vm);
+            }
+
+            toDo.Description = vm.Description;
+            toDo.Deadline = vm.Deadline;
+            toDo.IsCompleted = vm.IsCompleted;
+
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index", "ToDos");
+        }
+
+        public async Task<IActionResult> Detail(int id)
+        {
+            if (id == null)
+            {
+                return NotFound();
+            }
+            var toDo = await _context.ToDos.FirstOrDefaultAsync(x => x.Id == id);
+            if (toDo == null)
+            {
+                return NotFound();
+            }
+
+            var detailToDoVM = new DetailToDoVM()
+            {
+                Id = id,
+                Title=toDo.Title,
+                Deadline=toDo.Deadline,
+                Description=toDo.Description,
+                CreatedDate=DateTime.Now,
+                IsCompleted=toDo.IsCompleted,
+            };
+
+            return View(detailToDoVM);
+
         }
     }
 }

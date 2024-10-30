@@ -1,0 +1,57 @@
+﻿@{
+    ViewData["Title"] = "Update";
+}
+@model UpdateToDoVM
+<div class="homepage-content" style="text-align: center; padding: 50px;">
+    <h1>Update @Model.Title</h1>
+
+
+    <div style="max-width: 600px; margin: 0 auto;">
+
+        <form asp-controller="ToDos" asp-action="Update" method="post">
+            <div class="form-group">
+                <div class="input-group">
+                    <input asp-for="Title"  readonly style="width: 100%; padding: 8px; margin-top: 5px" />
+                    
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="input-group">
+                    <textarea  placeholder="description" asp-for="Description" class="form-control" rows="8"></textarea>
+
+                    <span class="text-danger" asp-validation-for="Description"></span>
+
+                </div>
+            </div>
+            <div class="form-group">
+            <div class="input-group">
+                <input asp-for="Deadline" type="date" style="width: 100%; padding: 8px; margin-top: 5px" />
+                <span class="text-danger" asp-validation-for="Deadline"></span>
+            </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="IsCompleted">Is Completed?</label>
+                <input asp-for="IsCompleted" class="form-check-inline"  style="width: 1.5em; height: 1.5em;" />
+               
+            </div>
+
+
+
+
+            <button type="submit" style="padding: 10px 20px; margin-top: 5px; background-color: #007bff; color: white; border: none; border-radius: 5px;">Submit</button>
+        </form>
+
+    </div>
+
+    <a class="btn btn-info mb-1" style="margin-top:5px" asp-action="Index" asp-controller="ToDos">Go back</a>
+</div>
+
+
+
+@section Scripts {
+
+    <partial name="_ValidationScriptsPartial"></partial>
+
+   
+}
+

@@ -18,6 +18,10 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddDefaultTokenProviders();
 
 builder.Services.AddScoped<IDbInitializer, DbInitializer>();
+builder.Services.ConfigureApplicationCookie(options =>
+{
+    options.LoginPath = "/login";
+});
 var app = builder.Build();
 DataSeedingAsync();
 
