@@ -5,11 +5,38 @@
 }
 
 <div class="homepage-content" style="text-align: center; padding: 50px;">
-
     <h1>Welcome to your To Do List</h1>
     <br />
 
+    <!-- Filter and Search Section -->
     <div style="max-width: 600px; margin: 0 auto;">
+        <form method="get" asp-action="Filter" class="mb-3">
+            <div class="form-row align-items-center">
+                <div class="col-auto">
+                    <label for="search">Search:</label>
+                    <input type="text" id="search" name="search" class="form-control" placeholder="Search by title...">
+                </div>
+                <div class="col-auto">
+                    <label for="status">Status:</label>
+                    <select id="status" name="status" class="form-control">
+                        <option value="">All</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Pending">Pending</option>
+                    </select>
+                </div>
+                <div class="col-auto">
+                    <label for="deadline">Deadline Before:</label>
+                    <input type="date" id="deadline" name="deadlineBefore" class="form-control">
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class="btn btn-primary mt-4">Filter</button>
+                </div>
+                <div class="col-auto">
+                    <a asp-action="Index" class="btn btn-info mt-4">Reset</a>
+                </div>
+            </div>
+        </form>
+
         <a class="btn btn-primary mb-1" asp-action="Create" asp-controller="ToDos">Add new to do</a>
         <table class="table table-hover">
             <thead>
@@ -37,18 +64,14 @@
                             {
                                 <div style="color:red">Pending</div>
                             }
-
                         </td>
-                        <th>
+                        <td>
                             <a class="btn btn-info btn-sm" asp-action="Detail" asp-controller="ToDos" asp-route-id="@toDo.Id">See description</a>
                             <a class="btn btn-primary btn-sm" asp-action="Update" asp-controller="ToDos" asp-route-id="@toDo.Id">Edit</a>
                             <form method="post" asp-action="Delete" asp-controller="ToDos" asp-route-id="@toDo.Id" onsubmit="return confirm('Do you want to delete this post?')">
-
                                 <button style="margin-top:3px" type="submit" class="btn btn-danger btn-sm">Delete</button>
                             </form>
-                          
-
-                        </th>
+                        </td>
                     </tr>
                     counter++;
                 }

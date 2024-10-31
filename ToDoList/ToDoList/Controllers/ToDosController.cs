@@ -41,6 +41,58 @@ namespace ToDoList.Controllers
 
 
 
+        public async Task<IActionResult> Filter(string status, DateTime? deadlineBefore, string search)
+        {
+            var toDos = new List<ToDo>();
+
+
+            if (status == null && !deadlineBefore.HasValue)
+            {
+                toDos = await _context.ToDos.Include(x => x.ApplicationUser).Where(x => x.Title.Contains(search)).ToListAsync();
+            }
+            else if (status == null && deadlineBefore.HasValue)
+            {
+                toDos = await _context.ToDos.Include(x => x.ApplicationUser).Where(x => x.Deadline <= deadlineBefore && x.Title.Contains(search)).ToListAsync();
+            }
+
+            else if (status == "Pending" && !deadlineBefore.HasValue)
+            {
+                toDos = await _context.ToDos.Include(x => x.ApplicationUser).Where(x => !x.IsCompleted && x.Title.Contains(search)).ToListAsync();
+
+            }
+            else if (status == "Completed" && !deadlineBefore.HasValue)
+            {
+                toDos = await _context.ToDos.Include(x => x.ApplicationUser).Where(x => x.IsCompleted && x.Title.Contains(search)).ToListAsync();
+            }
+
+            else if (status == "Pending" && deadlineBefore.HasValue)
+            {
+                toDos = await _context.ToDos.Include(x => x.ApplicationUser).Where(x => x.Deadline <= deadlineBefore && !x.IsCompleted && x.Title.Contains(search)).ToListAsync();
+
+            }
+            else 
+            {
+                toDos = await _context.ToDos.Include(x => x.ApplicationUser).Where(x => x.Deadline <= deadlineBefore && x.IsCompleted && x.Title.Contains(search)).ToListAsync();
+
+            }
+
+
+            var toDoVMs = toDos.Select(x => new ToDoVM
+            {
+                Id = x.Id,
+                Title = x.Title,
+                Deadline = x.Deadline,
+                Description = x.Description,
+
+                CreatedDate = x.CreatedDate,
+                IsCompleted = x.IsCompleted,
+            }).ToList();
+
+            return View("Index", toDoVMs);
+        }
+
+
+
         public IActionResult Create()
         {
             return View();
