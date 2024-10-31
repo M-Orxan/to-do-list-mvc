@@ -14,5 +14,6 @@ namespace ToDoList.Data
 
         public DbSet<ToDo> ToDos { get; set; }
         public DbSet<ApplicationUser> ApplicationUsers { get; set; }
+        public DbSet<ContactForm> ContactForms { get; set; }
     }
 }

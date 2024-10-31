@@ -29,8 +29,7 @@ namespace ToDoList.Controllers
             return View();
         }
 
-
-        [HttpPost]
+        [HttpPost("/login")]
         public async Task<IActionResult> Login(LoginVM vm)
         {
             if (!ModelState.IsValid)

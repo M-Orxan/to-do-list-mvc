@@ -3,10 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using ToDoList.Data;
 using ToDoList.Models;
+using ToDoList.Services;
 using ToDoList.Utilities;
 
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddTransient<IEmailSender, EmailSender>();
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(options => options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -18,6 +19,7 @@ builder.Services.AddIdentity<ApplicationUser, IdentityRole>()
     .AddDefaultTokenProviders();
 
 builder.Services.AddScoped<IDbInitializer, DbInitializer>();
+
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/login";

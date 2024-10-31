@@ -4,12 +4,13 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ToDoList.Data;
 using ToDoList.Models;
+using ToDoList.Utilities;
 using ToDoList.ViewModels;
 
 namespace ToDoList.Controllers
 {
-    [Authorize(Roles ="Admin")]
-    [Authorize(Roles ="User")]
+
+    [Authorize]
     public class ToDosController : Controller
     {
         private readonly ApplicationDbContext _context;
@@ -30,7 +31,7 @@ namespace ToDoList.Controllers
                 Title = x.Title,
                 Deadline = x.Deadline,
                 Description = x.Description,
-                ApplicationUserId = x.ApplicationUserId,
+
                 CreatedDate = x.CreatedDate,
                 IsCompleted = x.IsCompleted,
             }).ToList();
@@ -145,7 +146,7 @@ namespace ToDoList.Controllers
                 return NotFound();
             }
 
-            if (vm.Deadline < DateTime.Now.AddDays(-1))
+            if (vm.Deadline < DateTime.Now.AddDays(-1) && vm.IsCompleted == false)
             {
                 ModelState.AddModelError("Deadline", "The deadline cannot be in the past");
                 return View(vm);
@@ -174,11 +175,11 @@ namespace ToDoList.Controllers
             var detailToDoVM = new DetailToDoVM()
             {
                 Id = id,
-                Title=toDo.Title,
-                Deadline=toDo.Deadline,
-                Description=toDo.Description,
-                CreatedDate=DateTime.Now,
-                IsCompleted=toDo.IsCompleted,
+                Title = toDo.Title,
+                Deadline = toDo.Deadline,
+                Description = toDo.Description,
+                CreatedDate = DateTime.Now,
+                IsCompleted = toDo.IsCompleted,
             };
 
             return View(detailToDoVM);

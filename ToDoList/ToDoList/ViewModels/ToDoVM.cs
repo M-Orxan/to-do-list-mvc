@@ -17,6 +17,6 @@ namespace ToDoList.ViewModels
         public bool IsCompleted { get; set; }
 
 
-        public string ApplicationUserId { get; set; }
+      
     }
 }

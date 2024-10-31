@@ -1,16 +1,22 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Humanizer;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.IdentityModel.Tokens;
 using System.Diagnostics;
 using ToDoList.Models;
+using ToDoList.Services;
+using ToDoList.ViewModels;
 
 namespace ToDoList.Controllers
 {
     public class PagesController : Controller
     {
         private readonly ILogger<PagesController> _logger;
+        private readonly IEmailSender _emailSender;
 
-        public PagesController(ILogger<PagesController> logger)
+        public PagesController(ILogger<PagesController> logger, IEmailSender emailSender)
         {
             _logger = logger;
+            _emailSender = emailSender;
         }
 
         public IActionResult Home()
@@ -26,7 +32,30 @@ namespace ToDoList.Controllers
 
         public IActionResult Contact()
         {
+           
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult SendMessage(ContactFormVM vm)
+        {
+           
+            if (!ModelState.IsValid)
+            {
+                return View("Contact");
+            }
+            try
+            {
+                _emailSender.SendEmailAsync(vm.Name, vm.Email, vm.Subject, vm.Message);
+                TempData["MessageStatus"] = "Message sent successfully";
+            }
+            catch
+            {
+                TempData["MessageStatus"] = "Message sending failed";
+            }
+           
+
+            return RedirectToAction("Contact",vm);
         }
 
         public IActionResult Privacy()
