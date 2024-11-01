@@ -1,8 +1,10 @@
 ﻿using MailKit.Net.Smtp;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.ModelBinding;
 using Microsoft.EntityFrameworkCore;
 using MimeKit;
+using NuGet.Common;
 using System.Net.Mail;
 using ToDoList.Data;
 using ToDoList.Models;
@@ -175,7 +177,7 @@ namespace ToDoList.Controllers
             {
                 await _userManager.DeleteAsync(user);
                 TempData["WarningMessage"] = "Unable to confirm email. Try again";
-               
+
                 return RedirectToAction("Register");
 
             }
@@ -190,6 +192,93 @@ namespace ToDoList.Controllers
         {
             await _signInManager.SignOutAsync();
             return RedirectToAction("Home", "Pages");
+        }
+
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+
+
+        [HttpPost]
+        public async Task<IActionResult> ForgotPassword(ForgotPasswordVM vm)
+        {
+            if (vm.Email == null)
+            {
+                ModelState.AddModelError("Email", "Email field is required");
+                return View();
+            }
+            var user = await _userManager.FindByEmailAsync(vm.Email);
+            if (user == null)
+            {
+                ModelState.AddModelError("Email", "There's no account with this email");
+                return View(vm);
+            }
+            string passwordResetToken = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+            var passwordResetTokenLink = Url.Action("ResetPassword", "Accounts", new
+            {
+                userId = user.Id,
+                token = passwordResetToken
+            }, HttpContext.Request.Scheme);
+
+            MimeMessage message = new MimeMessage();
+            message.From.Add(new MailboxAddress("Admin", "orxanm385@gmail.com"));
+            message.To.Add(new MailboxAddress("User", vm.Email));
+
+            message.Subject = "Password Reset";
+            var bodyBuiler = new BodyBuilder();
+            bodyBuiler.TextBody = passwordResetTokenLink;
+            message.Body = bodyBuiler.ToMessageBody();
+
+
+            MailKit.Net.Smtp.SmtpClient client = new MailKit.Net.Smtp.SmtpClient();
+            client.Connect("smtp.gmail.com", 587, false);
+            client.Authenticate("orxanm385@gmail.com", "bujg jlxb smmb xfdq");
+            client.Send(message);
+            client.Disconnect(true);
+            TempData["SuccessMessage"] = "Password reset link has been sent to your email.";
+            return View();
+        }
+
+        public async Task<IActionResult> ResetPassword(string userId, string token)
+        {
+            TempData["UserId"] = userId;
+            TempData["Token"] = token;
+
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> ResetPassword(ResetPasswordVM vm)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View();
+            }
+            var userId = TempData["UserId"];
+            var token = TempData["Token"];
+
+            var user = await _userManager.FindByIdAsync(userId.ToString());
+
+            var result = await _userManager.ResetPasswordAsync(user, token.ToString(), vm.Password);
+            if (result.Succeeded)
+            {
+                TempData["SuccessMessage"] = "Password has been reset succesfully";
+                return RedirectToAction("Login", "Accounts");
+            }
+            else
+            {
+                foreach (var error in result.Errors)
+                {
+                    ModelState.AddModelError("", error.Description);
+                }
+
+                return View();
+            }
+
+
         }
     }
 }
