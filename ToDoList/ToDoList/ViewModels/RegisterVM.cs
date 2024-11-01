@@ -4,6 +4,7 @@ namespace ToDoList.ViewModels
 {
     public class RegisterVM
     {
+        public string? Id { get; set; }
         [Required]
         public string FirstName { get; set; }
         [Required]

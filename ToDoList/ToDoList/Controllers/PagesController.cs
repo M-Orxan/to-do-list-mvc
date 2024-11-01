@@ -24,15 +24,17 @@ namespace ToDoList.Controllers
             return View();
         }
 
-        public IActionResult About()
-        {
-            return View();
-        }
-
 
         public IActionResult Contact()
         {
            
+            return View();
+        }
+
+        [HttpGet("/accessdenied")]
+        public IActionResult AccessDenied()
+        {
+
             return View();
         }
 

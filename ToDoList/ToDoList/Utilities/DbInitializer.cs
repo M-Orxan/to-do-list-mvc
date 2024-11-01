@@ -32,6 +32,7 @@ namespace ToDoList.Utilities
 
             await _userManager.CreateAsync(new ApplicationUser
             {
+                Id= Guid.NewGuid().ToString(),
                 FirstName = "Orkhan",
                 LastName = "Mustafayev",
                 Email = "orxanm385@gmail.com",

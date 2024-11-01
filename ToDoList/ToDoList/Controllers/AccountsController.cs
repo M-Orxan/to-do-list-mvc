@@ -1,5 +1,9 @@
-﻿using Microsoft.AspNetCore.Identity;
+﻿using MailKit.Net.Smtp;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using MimeKit;
+using System.Net.Mail;
 using ToDoList.Data;
 using ToDoList.Models;
 using ToDoList.Utilities;
@@ -73,6 +77,8 @@ namespace ToDoList.Controllers
             {
                 return View();
             }
+            Random random = new Random();
+            int code = random.Next(100000, 1000000);
 
             var checkByEmail = await _userManager.FindByEmailAsync(vm.Email);
             if (checkByEmail != null)
@@ -81,19 +87,16 @@ namespace ToDoList.Controllers
                 return View(vm);
             }
 
-            //var checkByUsername = await _userManager.FindByNameAsync(vm.Email);
-            //if (checkByUsername != null)
-            //{
-            //    ModelState.AddModelError("Username", "This username aready exists");
-            //    return View(vm);
-            //}
 
             var user = new ApplicationUser()
             {
+                Id = Guid.NewGuid().ToString(),
                 FirstName = vm.FirstName,
                 LastName = vm.LastName,
                 Email = vm.Email,
                 UserName = vm.Username,
+                RegisterDate = DateTime.Now,
+                ConfirmCode = code
 
             };
 
@@ -102,6 +105,25 @@ namespace ToDoList.Controllers
             if (result.Succeeded)
             {
                 await _userManager.AddToRoleAsync(user, WebsiteRole.WebsiteUser);
+
+                MimeMessage message = new MimeMessage();
+                message.From.Add(new MailboxAddress("Admin", "orxanm385@gmail.com"));
+                message.To.Add(new MailboxAddress("User", user.Email));
+
+                message.Subject = "Email verification for To Do List";
+                var bodyBuiler = new BodyBuilder();
+                bodyBuiler.TextBody = "Your verification code: " + code;
+                message.Body = bodyBuiler.ToMessageBody();
+
+                MailKit.Net.Smtp.SmtpClient client = new MailKit.Net.Smtp.SmtpClient();
+                client.Connect("smtp.gmail.com", 587, false);
+                client.Authenticate("orxanm385@gmail.com", "bujg jlxb smmb xfdq");
+                client.Send(message);
+                client.Disconnect(true);
+
+                TempData["UserId"] = user.Id;
+
+                return RedirectToAction("ConfirmEmail", "Accounts");
             }
             else
             {
@@ -116,6 +138,53 @@ namespace ToDoList.Controllers
             return RedirectToAction("Home", "Pages");
         }
 
+
+        public async Task<IActionResult> ConfirmEmail()
+        {
+
+            var userId = TempData["UserId"];
+            TempData["UserId"] = userId;
+            ViewBag.UserId = userId;
+            return View();
+        }
+
+
+        [HttpPost]
+        public async Task<IActionResult> ConfirmEmail(ConfirmEmailVM vm)
+        {
+
+            var userId = TempData["UserId"];
+            TempData["UserId"] = userId;
+            ViewBag.UserId = userId;
+            var user = await _userManager.FindByIdAsync(vm.UserId);
+
+            if (vm.ConfirmCode == null)
+            {
+                ModelState.AddModelError("ConfirmCode", "Code field is required");
+                return View();
+            }
+
+            if (user.ConfirmCode == vm.ConfirmCode)
+            {
+                user.EmailConfirmed = true;
+                await _userManager.UpdateAsync(user);
+                await _signInManager.SignInAsync(user, true);
+                return RedirectToAction("Home", "Pages");
+            }
+            else
+            {
+                await _userManager.DeleteAsync(user);
+                TempData["WarningMessage"] = "Unable to confirm email. Try again";
+               
+                return RedirectToAction("Register");
+
+            }
+
+
+
+
+
+        }
 
         public async Task<IActionResult> LogOut()
         {

@@ -34,7 +34,7 @@
                     <textarea rows="5" asp-for="Message" style="width: 100%; padding: 8px;"></textarea>
                     <span class="text-danger" asp-validation-for="Message"></span>
                 </div>
-                <button type="submit" style="padding: 10px 20px; background-color: #007bff; color: white; border: none; border-radius: 5px;">Send Message</button>
+                <button type="submit" style="padding: 10px 20px; margin-bottom:10px; background-color: #007bff; color: white; border: none; border-radius: 5px;">Send Message</button>
             </form>
 
             @if (TempData["MessageStatus"] != null)

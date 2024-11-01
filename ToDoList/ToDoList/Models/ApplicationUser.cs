@@ -7,6 +7,8 @@ namespace ToDoList.Models
 
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        public DateTime RegisterDate { get; set; }
+        public int ConfirmCode { get; set; }
 
         public List<ToDo> ToDos { get; set; }
     }

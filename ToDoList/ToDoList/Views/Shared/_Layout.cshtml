@@ -45,14 +45,19 @@
                             <li class="nav-item">
                                 <a class="nav-link" style="color: black;" asp-controller="Pages" asp-action="Home">Home</a>
                             </li>
-                            <li class="nav-item">
-                                <a class="nav-link" style="color: black;" asp-controller="Pages" asp-action="About">About us</a>
-                            </li>
+                            
                             @if (User.Identity.IsAuthenticated)
                             {
                                 <li class="nav-item">
                                     <a class="nav-link" asp-controller="ToDos" asp-action="Index" style="color: black;">My To Do List</a>
                                 </li>
+
+                                @if (User.IsInRole("Admin"))
+                                {
+                                    <li class="nav-item">
+                                        <a class="nav-link" asp-controller="Users" asp-action="Index" style="color: black;">Users</a>
+                                    </li>
+                                }
                             }
                             <li class="nav-item">
                                 <a class="nav-link" asp-controller="Pages" asp-action="Contact" style="color: black;">Contact</a>

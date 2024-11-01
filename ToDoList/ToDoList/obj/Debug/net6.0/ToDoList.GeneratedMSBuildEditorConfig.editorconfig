@@ -18,6 +18,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\USER\Desktop\Projects\to-do-list-mvc\ToDoList\ToDoList
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/USER/Desktop/Projects/to-do-list-mvc/ToDoList/ToDoList/Views/Accounts/ConfirmEmail.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcQ29uZmlybUVtYWlsLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/USER/Desktop/Projects/to-do-list-mvc/ToDoList/ToDoList/Views/Accounts/Login.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcTG9naW4uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -26,8 +30,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudHNcUmVnaXN0ZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/USER/Desktop/Projects/to-do-list-mvc/ToDoList/ToDoList/Views/Pages/About.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQWJvdXQuY3NodG1s
+[C:/Users/USER/Desktop/Projects/to-do-list-mvc/ToDoList/ToDoList/Views/Pages/AccessDenied.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGFnZXNcQWNjZXNzRGVuaWVkLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/USER/Desktop/Projects/to-do-list-mvc/ToDoList/ToDoList/Views/Pages/Contact.cshtml]
@@ -64,6 +68,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/USER/Desktop/Projects/to-do-list-mvc/ToDoList/ToDoList/Views/ToDos/Update.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVG9Eb3NcVXBkYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/USER/Desktop/Projects/to-do-list-mvc/ToDoList/ToDoList/Views/Users/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/USER/Desktop/Projects/to-do-list-mvc/ToDoList/ToDoList/Views/_ViewImports.cshtml]

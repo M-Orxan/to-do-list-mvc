@@ -1,6 +1,7 @@
 ﻿@model RegisterVM
 @{
     ViewData["Title"] = "Register";
+    var warningMessage = TempData["WarningMessage"] as string;
 }
 
 <div class="homepage-content" style="text-align: center; padding: 50px;">
@@ -9,6 +10,10 @@
 
     <div style="max-width: 600px; margin: 0 auto;">
         <div asp-validation-summary="ModelOnly" class="text-danger fw-bold"></div>
+        @if (!string.IsNullOrEmpty(warningMessage))
+        {
+            <strong class="text-danger">Warning! @warningMessage</strong>
+        }
         <form asp-controller="Accounts" asp-action="Register" method="post">
             <div class="input-group">
                 <input asp-for="FirstName" placeholder="Name" type="text" style="width: 100%; padding: 8px; margin-top: 5px" />

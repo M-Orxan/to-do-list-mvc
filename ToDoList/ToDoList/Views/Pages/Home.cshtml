@@ -8,21 +8,35 @@
 </div> *@
 
 <div class="homepage-content" style="text-align: center; padding: 50px;">
-    <h1>Welcome to To Do List</h1>
-    <p>Your Personal Task Manager</p>
+    <h1>Your Personal Task Manager</h1>
+ 
 
     <div style="max-width: 600px; margin: 0 auto;">
-        <p>Stay organized and achieve your goals effortlessly. [Website Name] is a simple, intuitive tool designed to help you manage your daily tasks and stay productive.</p>
 
-
-        <p>Ready to get started? <a href="/signup">Sign Up</a> or <a href="/login">Login</a> to start organizing your day!</p>
 
         <p style="font-style: italic; margin-top: 30px;">"Start each day with a clear plan and end it with a sense of accomplishment."</p>
 
+        <h1>About Us</h1>
+        <p>Simple, intuitive tool designed to help you manage your daily tasks and stay productive</p>
 
-        <h2>Learn More</h2>
-        <p>Discover more about what makes [Website Name] the perfect tool for you on our <a asp-controller="Pages" asp-action="About">About Page</a></p>
+        <h2>Our Purpose</h2>
+        <p>In today’s busy world, staying organized and productive can be challenging. To Do List is here to provide a simple, intuitive tool to keep your tasks and priorities in order. Our mission is to make task management easy, accessible, and enjoyable for everyone.</p>
+
+        <h2>Key Features</h2>
+        <ul style="list-style-type: none; padding: 0;">
+            <li>Add, edit, and delete tasks easily.</li>
+            <li>Organize tasks by priority and due date.</li>
+            <li>Filter tasks to see what's most important.</li>
+            <li>Get motivated with daily productivity tips and reminders.</li>
+        </ul>
         <h2>Contact Us</h2>
         <p>Have questions or suggestions? We’d love to hear from you! Contact us through our <a asp-controller="Pages" asp-action="Contact">Contact Page</a></p>
+        
+        @if (!User.Identity.IsAuthenticated)
+        {
+            <p>Ready to get started? <a asp-controller="Accounts" asp-action="Register">Register</a> or <a asp-controller="Accounts" asp-action="Login">Login</a> to start organizing your day!</p>
+
+        }
+
     </div>
 </div>

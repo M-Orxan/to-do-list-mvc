@@ -23,6 +23,7 @@ builder.Services.AddScoped<IDbInitializer, DbInitializer>();
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.LoginPath = "/login";
+    options.AccessDeniedPath = "/accessdenied";
 });
 var app = builder.Build();
 DataSeedingAsync();
