@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+@model UserVM
+<div class="homepage-content" style="text-align: center; padding: 50px;">
+    <h1>Your Profile</h1>
+
+    <p><strong>Name:</strong> @Model.FirstName</p>
+    <p><strong>Surname:</strong> @Model.LastName</p>
+    <p><strong>Username:</strong> @Model.Username</p>
+    <p><strong>Email:</strong> @Model.Email</p>
+    <p><strong>Registration Date:</strong> @Model.RegisterDate.ToShortDateString()</p>
+
+    <form method="post" asp-action="DeleteAccount" onsubmit="return confirm('Are you sure to delete your account?')">
+        <button type="submit" class="btn btn-danger">Delete your account</button>
+    </form>
+    
+
+
+
+</div>
+
+

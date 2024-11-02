@@ -153,9 +153,11 @@ namespace ToDoList.Controllers
 
             if (vm.Deadline < DateTime.Now.AddDays(-1))
             {
-                ModelState.AddModelError("Deadline", "The deadline cannot be in the past");
+                ModelState.AddModelError("Deadline", "Deadline cannot be in the past");
                 return View(vm);
             }
+
+           
 
 
             var toDo = new ToDo()
@@ -166,6 +168,7 @@ namespace ToDoList.Controllers
                 Description = vm.Description,
                 ApplicationUserId = loggedInUser.Id,
                 CreatedDate = DateTime.Now,
+               
 
             };
 
@@ -268,10 +271,14 @@ namespace ToDoList.Controllers
                 Description = toDo.Description,
                 CreatedDate = DateTime.Now,
                 IsCompleted = toDo.IsCompleted,
+              
             };
 
             return View(detailToDoVM);
 
         }
+
+
+      
     }
 }

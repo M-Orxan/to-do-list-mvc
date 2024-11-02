@@ -15,6 +15,8 @@ namespace ToDoList.ViewModels
 
         [Required]
         public DateTime Deadline { get; set; }
+        [Required]
+       
 
         public string ApplicationUserId { get; set; }
     }

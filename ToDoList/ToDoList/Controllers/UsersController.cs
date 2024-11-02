@@ -19,9 +19,19 @@ namespace ToDoList.Controllers
             _context = context;
             _userManager = userManager;
         }
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string search)
         {
-            var users = await _context.Users.Where(x=>x.Email!= "orxanm385@gmail.com").Where(x=>x.EmailConfirmed).ToListAsync();
+            var users = new List<ApplicationUser>();
+            if (search != null)
+            {
+                 users = await _context.Users.Where(x => x.Email != "orxanm385@gmail.com").Where(x => x.EmailConfirmed && x.FirstName.Contains(search)).ToListAsync();
+
+            }
+            else
+            {
+                 users = await _context.Users.Where(x => x.Email != "orxanm385@gmail.com").Where(x => x.EmailConfirmed).ToListAsync();
+
+            }
 
             var vm = users.Select(x => new UserVM
             {
@@ -30,6 +40,7 @@ namespace ToDoList.Controllers
                 LastName = x.LastName,
                 RegisterDate = x.RegisterDate,
                 Username = x.UserName,
+                Email = x.Email,
             }).ToList();
             return View(vm);
         }

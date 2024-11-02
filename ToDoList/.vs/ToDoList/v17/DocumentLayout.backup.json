@@ -3,36 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\views\\accounts\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\views\\accounts\\resetpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\controllers\\accountscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\viewmodels\\forgotpasswordvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\viewmodels\\forgotpasswordvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\viewmodels\\resetpasswordvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\viewmodels\\resetpasswordvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\views\\accounts\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\views\\accounts\\register.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\views\\accounts\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\views\\accounts\\forgotpassword.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\views\\accounts\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\views\\accounts\\confirmemail.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\views\\accounts\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\views\\accounts\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|c:\\users\\user\\desktop\\projects\\to-do-list-mvc\\todolist\\todolist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7F2A089F-FE4F-4D62-A805-9D52860C9E27}|ToDoList\\ToDoList.csproj|solutionrelative:todolist\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -67,92 +47,27 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ResetPassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Views\\Accounts\\ResetPassword.cshtml",
-              "RelativeDocumentMoniker": "ToDoList\\Views\\Accounts\\ResetPassword.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Views\\Accounts\\ResetPassword.cshtml*",
-              "RelativeToolTip": "ToDoList\\Views\\Accounts\\ResetPassword.cshtml*",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAACgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T19:33:05.076Z",
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "ToDoList\\Controllers\\DashboardController.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Controllers\\DashboardController.cs*",
+              "RelativeToolTip": "ToDoList\\Controllers\\DashboardController.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-02T12:32:19.118Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ForgotPasswordVM.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\ViewModels\\ForgotPasswordVM.cs",
-              "RelativeDocumentMoniker": "ToDoList\\ViewModels\\ForgotPasswordVM.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\ViewModels\\ForgotPasswordVM.cs",
-              "RelativeToolTip": "ToDoList\\ViewModels\\ForgotPasswordVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAnAAAAAAAAAA==",
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Program.cs",
+              "RelativeDocumentMoniker": "ToDoList\\Program.cs",
+              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Program.cs",
+              "RelativeToolTip": "ToDoList\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAVAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T19:31:00.032Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "ResetPasswordVM.cs",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\ViewModels\\ResetPasswordVM.cs",
-              "RelativeDocumentMoniker": "ToDoList\\ViewModels\\ResetPasswordVM.cs",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\ViewModels\\ResetPasswordVM.cs",
-              "RelativeToolTip": "ToDoList\\ViewModels\\ResetPasswordVM.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABBAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T19:27:39.112Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ForgotPassword.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Views\\Accounts\\ForgotPassword.cshtml",
-              "RelativeDocumentMoniker": "ToDoList\\Views\\Accounts\\ForgotPassword.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Views\\Accounts\\ForgotPassword.cshtml",
-              "RelativeToolTip": "ToDoList\\Views\\Accounts\\ForgotPassword.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T19:07:18.199Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "Login.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Views\\Accounts\\Login.cshtml",
-              "RelativeDocumentMoniker": "ToDoList\\Views\\Accounts\\Login.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Views\\Accounts\\Login.cshtml",
-              "RelativeToolTip": "ToDoList\\Views\\Accounts\\Login.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T19:06:49.798Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Register.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Views\\Accounts\\Register.cshtml",
-              "RelativeDocumentMoniker": "ToDoList\\Views\\Accounts\\Register.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Views\\Accounts\\Register.cshtml",
-              "RelativeToolTip": "ToDoList\\Views\\Accounts\\Register.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAA+AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T18:58:43.878Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "ConfirmEmail.cshtml",
-              "DocumentMoniker": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Views\\Accounts\\ConfirmEmail.cshtml",
-              "RelativeDocumentMoniker": "ToDoList\\Views\\Accounts\\ConfirmEmail.cshtml",
-              "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Views\\Accounts\\ConfirmEmail.cshtml",
-              "RelativeToolTip": "ToDoList\\Views\\Accounts\\ConfirmEmail.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-11-01T18:58:33.189Z",
+              "WhenOpened": "2024-11-02T12:32:01.743Z",
               "EditorCaption": ""
             },
             {
@@ -163,9 +78,9 @@
               "RelativeDocumentMoniker": "ToDoList\\Controllers\\AccountsController.cs",
               "ToolTip": "C:\\Users\\USER\\Desktop\\Projects\\to-do-list-mvc\\ToDoList\\ToDoList\\Controllers\\AccountsController.cs",
               "RelativeToolTip": "ToDoList\\Controllers\\AccountsController.cs",
-              "ViewState": "AgIAAPAAAAAAAAAAAAAAAP0AAAAzAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAAB8AAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-01T15:11:45.153Z",
+              "WhenOpened": "2024-11-02T12:31:47.312Z",
               "EditorCaption": ""
             }
           ]

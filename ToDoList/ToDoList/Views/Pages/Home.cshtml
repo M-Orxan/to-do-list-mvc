@@ -8,6 +8,13 @@
 </div> *@
 
 <div class="homepage-content" style="text-align: center; padding: 50px;">
+
+    @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success">
+                @TempData["SuccessMessage"]
+            </div>
+        }
     <h1>Your Personal Task Manager</h1>
  
 

@@ -61,7 +61,7 @@ namespace ToDoList.Controllers
             }
 
 
-            return RedirectToAction("Home", "Pages");
+            return RedirectToAction("Index", "Dashboard");
         }
 
 
@@ -171,7 +171,7 @@ namespace ToDoList.Controllers
                 user.EmailConfirmed = true;
                 await _userManager.UpdateAsync(user);
                 await _signInManager.SignInAsync(user, true);
-                return RedirectToAction("Home", "Pages");
+                return RedirectToAction("Index", "Dashboard");
             }
             else
             {
